@@ -1,11 +1,12 @@
+**EmpireOne internal style guide**
+
 # Prelude
 
 > Role models are important. <br/>
 > -- Officer Alex J. Murphy / RoboCop
 
 One thing has always bothered me as a Ruby developer - Python developers have a
-great programming style reference
-([PEP-8][]) and we never got an official
+great programming style reference ([PEP-8][]) and we never got an official
 guide, documenting Ruby coding style and best practices. And I do believe that
 style matters. I also believe that a great hacker community, such as Ruby has,
 should be quite capable of producing this coveted document.
@@ -106,7 +107,7 @@ Translations of the guide are available in the following languages:
 <sup>[[link](#utf-8)]</sup>
 
 * <a name="spaces-indentation"></a>
-  Use two **spaces** per indentation level (aka soft tabs). No hard tabs.
+  ~~Use two **spaces** per indentation level (aka soft tabs). No hard tabs.~~ #EmpireOne prefers hard tabs.
 <sup>[[link](#spaces-indentation)]</sup>
 
   ```Ruby
@@ -231,7 +232,7 @@ Translations of the guide are available in the following languages:
   strings. For hash literals two styles are considered acceptable.
 
   ```Ruby
-  # good - space after { and before }
+  # good - space after { and before } #EmpireOne preferred
   { one: 1, two: 2 }
 
   # good - no space after { and before }
@@ -247,7 +248,7 @@ Translations of the guide are available in the following languages:
   options:
 
   ```Ruby
-  # good - no spaces
+  # good - no spaces #EmpireOne preferred
   "string#{expr}"
 
   # ok - arguably more readable
@@ -364,7 +365,7 @@ Translations of the guide are available in the following languages:
              calc_something_else
            end
 
-  # good (and a bit more width efficient)
+  # good (and a bit more width efficient) #EmpireOne preferred
   kind =
     case year
     when 1850..1889 then 'Blues'
@@ -479,9 +480,9 @@ Translations of the guide are available in the following languages:
       .four
     ```
 
-  * **(Option B)** When continuing a chained method invocation on another line,
+  * **(Option B #EmpireOne preferred)** When continuing a chained method invocation on another line,
     include the `.` on the first line to indicate that the
-    expression continues.
+    expression continues. 
 
     ```Ruby
     # bad - need to read ahead to the second line to know that the chain continues
@@ -890,7 +891,7 @@ Translations of the guide are available in the following languages:
   ```
 
 * <a name="unless-for-negatives"></a>
-  Favor `unless` over `if` for negative conditions (or control flow `||`).
+  Favor `unless` over `if` for negative conditions (or control flow `||`). **#EmpireOne prefers readability**
 <sup>[[link](#unless-for-negatives)]</sup>
 
   ```Ruby
@@ -1166,7 +1167,7 @@ condition](#safe-assignment-in-condition).
   ```
 
 * <a name="no-explicit-return"></a>
-  Avoid `return` where not required for flow of control.
+ ~~Avoid `return` where not required for flow of control.~~ #EmpireOne prefers explicit returns
 <sup>[[link](#no-explicit-return)]</sup>
 
   ```Ruby
@@ -1182,8 +1183,8 @@ condition](#safe-assignment-in-condition).
   ```
 
 * <a name="no-self-unless-required"></a>
-  Avoid `self` where not required. (It is only required when calling a self
-  write accessor.)
+  ~~Avoid `self` where not required. (It is only required when calling a self
+  write accessor.)~~ #EmpireOne prefers self.column_name
 <sup>[[link](#no-self-unless-required)]</sup>
 
   ```Ruby
@@ -1207,8 +1208,8 @@ condition](#safe-assignment-in-condition).
   ```
 
 * <a name="no-shadowing"></a>
-  As a corollary, avoid shadowing methods with local variables unless they are
-  both equivalent.
+  ~~As a corollary, avoid shadowing methods with local variables unless they are
+  both equivalent.~~
 <sup>[[link](#no-shadowing)]</sup>
 
   ```Ruby
