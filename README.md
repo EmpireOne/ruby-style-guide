@@ -2847,11 +2847,11 @@ condition](#safe-assignment-in-condition).
 <sup>[[link](#no-mutable-keys)]</sup>
 
 * <a name="hash-literals"></a>
-  Use the Ruby 1.9 hash literal syntax when your hash keys are symbols.
+  ~~Use the Ruby 1.9 hash literal syntax when your hash keys are symbols.~~ # EmpireOne prefers hash-rockets
 <sup>[[link](#hash-literals)]</sup>
 
   ```Ruby
-  # bad
+  # bad #EmpireOne preferred
   hash = { :one => 1, :two => 2, :three => 3 }
 
   # good
@@ -3000,7 +3000,7 @@ condition](#safe-assignment-in-condition).
     name = 'Bozhidar'
     ```
 
-  * **(Option B)** Prefer double-quotes unless your string literal
+  * **(Option B #EmpireOne preferred)** Prefer double-quotes unless your string literal
     contains `"` or escape characters you want to suppress.
 
     ```Ruby
